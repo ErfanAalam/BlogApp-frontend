@@ -17,7 +17,7 @@ const AddBlog = () => {
     formData.append('desc', desc)
     formData.append('file', file);
 
-    fetch("http://localhost:3003/addBlog", {
+    fetch("http://localhost:3005/addBlog", {
       method: "POST",
       body: formData
 

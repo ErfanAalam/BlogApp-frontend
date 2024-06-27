@@ -15,7 +15,7 @@ const EditUser = () => {
         const obj = { name, email, message, id: idToEdit }
 
         e.preventDefault()
-        fetch("http://localhost:3003/updateData", {
+        fetch("http://localhost:3005/updateData", {
             method: "PUT",
             headers: {
                 "content-type": "Application/json"
@@ -32,7 +32,7 @@ const EditUser = () => {
 
 
     useEffect(() => {
-        fetch("http://localhost:3003/edit/" + idToEdit)
+        fetch("http://localhost:3005/edit/" + idToEdit)
             .then((response) => {
                 return response.json()
             }).then((result) => {

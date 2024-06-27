@@ -16,7 +16,7 @@ const AddUser = () => {
 
     const obj = { name, email, message }
 
-    fetch("http://localhost:3003/getdata", {
+    fetch("http://localhost:3005/getdata", {
       method: "POST",
       headers: {
         "content-type": "application/json"

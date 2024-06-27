@@ -6,7 +6,7 @@ function App() {
   const [foundedBlog, setFounedBlog] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:3003/showblog").then((response) => {
+    fetch("http://localhost:3005/showblog").then((response) => {
       return response.json()
     }).then((result) => {
       setBlogs(result)
@@ -18,7 +18,7 @@ function App() {
   function handleSearch(e) {
     e.preventDefault()
 
-    fetch("http://localhost:3003/search?q=" + search)
+    fetch("http://localhost:3005/search?q=" + search)
       .then((response) => {
         return response.json()
       }).then((result) => {
@@ -43,7 +43,7 @@ function App() {
             blogs.map((blog,index) => {
               return <div className="border-2 p-4  w-fit" key={index}>
                {blog.file && (
-                 <img src={`http://localhost:3003/${blog.file}` }alt={blog.title} className="img-fluid w-[300px]"  />
+                 <img src={`http://localhost:3005/${blog.file}` }alt={blog.title} className="img-fluid w-[300px]"  />
                 )}
                 <h1 className="text-2xl font-bold">{blog.title}</h1>
                 <h3 className="text-2xl">{blog.author}</h3>
@@ -55,7 +55,7 @@ function App() {
             foundedBlog.map((blog,index) => {
               return <div className="border-2 p-4  w-fit" key={index}>
                 {blog.file && (
-                 <img src={`http://localhost:3003/${blog.file}` }alt={blog.title} className="img-fluid" />
+                 <img src={`http://localhost:3005/${blog.file}` }alt={blog.title} className="img-fluid" />
                 )}
                 <h1 className="text-2xl font-bold">{blog.title}</h1>
                 <h3 className="text-2xl">{blog.author}</h3>
