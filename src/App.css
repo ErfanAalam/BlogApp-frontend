@@ -35,8 +35,9 @@
 .read-the-docs {
   color: #888;
 } */
+
+body {
+  background-color: #002226;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
  
-#root {
-  background-color: burlywood;
-  height:100vh;
 }

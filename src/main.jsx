@@ -10,8 +10,9 @@ import EditUser from './EditUser.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Router>
-    <div className='p-10 bg-black text-white'>
-      <ul className='flex justify-between'>
+    <div className='p-10 bg-[rgb(36,74,85)] text-white flex justify-between'>
+      <h1 className='text-3xl'>Erfan's BlogApp</h1>
+      <ul className='flex gap-16'>
         <li className='text-2xl'><a href='/'>Home</a></li>
         <li className='text-2xl'><a href='/addBlog'>Add Blog</a></li>
         <li className='text-2xl'><a href='/addUser'>Add User</a></li>
