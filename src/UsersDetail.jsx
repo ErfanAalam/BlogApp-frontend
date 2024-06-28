@@ -7,7 +7,7 @@ const UsersDetail = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        fetch("http://localhost:3005/").then((response) => {
+        fetch("https://blogapp-backend-4605.onrender.com/").then((response) => {
             return response.json()
         }).then((result) => {
             setUsers(result)
@@ -18,7 +18,7 @@ const UsersDetail = () => {
     const handleDelete = (id) => {
         console.log(id);
 
-        fetch("http://localhost:3005/delete", {
+        fetch("https://blogapp-backend-4605.onrender.com/delete", {
             method: "DELETE",
             headers: {
                 "Content-Type": "Application/json"

@@ -17,7 +17,7 @@ const AddBlog = () => {
     formData.append('desc', desc)
     formData.append('file', file);
 
-    fetch("http://localhost:3005/addBlog", {
+    fetch("https://blogapp-backend-4605.onrender.com/addBlog", {
       method: "POST",
       body: formData
 

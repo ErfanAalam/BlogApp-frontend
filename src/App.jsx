@@ -6,7 +6,7 @@ function App() {
   const [foundedBlog, setFounedBlog] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:3005/showblog").then((response) => {
+    fetch("https://blogapp-backend-4605.onrender.com/showblog").then((response) => {
       return response.json()
     }).then((result) => {
       setBlogs(result)
@@ -18,7 +18,7 @@ function App() {
   function handleSearch(e) {
     e.preventDefault()
 
-    fetch("http://localhost:3005/search?q=" + search)
+    fetch("https://blogapp-backend-4605.onrender.com/search?q=" + search)
       .then((response) => {
         return response.json()
       }).then((result) => {
@@ -44,7 +44,7 @@ function App() {
               return <div className="border-2 p-4 w-[700px] flex gap-8" key={index}>
                
                 {blog.file && (
-                  <img src={`http://localhost:3005/${blog.file}`} alt={blog.title} className=" w-[300px] " />
+                  <img src={`https://blogapp-backend-4605.onrender.com/${blog.file}`} alt={blog.title} className=" w-[300px] " />
                 )}
                <div className="text-white flex flex-col gap-4">
                <h1 className="text-2xl font-bold">{blog.title}</h1>
@@ -58,7 +58,7 @@ function App() {
             foundedBlog.map((blog, index) => {
               return <div className="border-2 p-4  w-fit" key={index}>
                 {blog.file && (
-                  <img src={`http://localhost:3005/${blog.file}`} alt={blog.title} className="img-fluid" />
+                  <img src={`https://blogapp-backend-4605.onrender.com/${blog.file}`} alt={blog.title} className="img-fluid" />
                 )}
                 <h1 className="text-2xl font-bold">{blog.title}</h1>
                 <h3 className="text-2xl">{blog.author}</h3>

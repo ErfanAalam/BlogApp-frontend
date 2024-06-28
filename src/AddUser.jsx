@@ -16,7 +16,7 @@ const AddUser = () => {
 
     const obj = { name, email, message }
 
-    fetch("http://localhost:3005/getdata", {
+    fetch("https://blogapp-backend-4605.onrender.com/getdata", {
       method: "POST",
       headers: {
         "content-type": "application/json"

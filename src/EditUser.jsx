@@ -15,7 +15,7 @@ const EditUser = () => {
         const obj = { name, email, message, id: idToEdit }
 
         e.preventDefault()
-        fetch("http://localhost:3005/updateData", {
+        fetch("https://blogapp-backend-4605.onrender.com/updateData", {
             method: "PUT",
             headers: {
                 "content-type": "Application/json"
@@ -32,7 +32,7 @@ const EditUser = () => {
 
 
     useEffect(() => {
-        fetch("http://localhost:3005/edit/" + idToEdit)
+        fetch("https://blogapp-backend-4605.onrender.com/edit/" + idToEdit)
             .then((response) => {
                 return response.json()
             }).then((result) => {
