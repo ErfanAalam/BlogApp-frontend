@@ -43,15 +43,16 @@ const AddUser = () => {
   };
   return (
     <>
-      <div className="App">
+      <div className="App text-white">
         {
           response ? <h1>Thank you for your informaton</h1> : ""
         }
-        <h1 className='text-4xl p-8 text-center'>Simple Form</h1>
+        <h1 className='text-4xl p-8 text-center'>Add User</h1>
         <form onSubmit={handleSubmit} className='flex flex-col justify-center items-center'>
           <div>
             <label htmlFor="name">Name:</label> <br /> <br />
             <input
+            className="p-2 rounded-lg bg-[#162f33]"
               type="text"
               id="name"
               name="name"
@@ -64,6 +65,7 @@ const AddUser = () => {
           <div>
             <label htmlFor="age">Email:</label> <br /> <br />
             <input
+            className="p-2 rounded-lg bg-[#162f33]"
               type="email"
               id="email"
               name="email"
@@ -77,6 +79,7 @@ const AddUser = () => {
           <div>
             <label htmlFor="age">Message:</label> <br /> <br />
             <textarea
+            className="p-2 rounded-lg bg-[#162f33]"
               name=""
               id=""
               value={message}
@@ -84,11 +87,11 @@ const AddUser = () => {
               onChange={(e) => setMessage(e.target.value)}></textarea>
           </div>
 
-          <button type="submit">Submit</button>
+          <button type="submit" className='text-2xl'>Submit</button>
         </form>
       </div>
 
-      <div className='flex justify-center'><button onClick={() => { navigate("/show") }}>Show Users</button></div>
+      <div className='flex justify-center text-white text-2xl'><button onClick={() => { navigate("/show") }}>Show Users</button></div>
     </>
   )
 }

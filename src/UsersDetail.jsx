@@ -41,8 +41,8 @@ const UsersDetail = () => {
     return (
         <div>
 
-            <h1 className='text-5xl text-center p-10'>Users list</h1>
-            <div className='flex flex-col items-center w-[100vw] '>
+            <h1 className='text-5xl text-center p-10 text-white'>Users list</h1>
+            <div className='flex flex-col items-center w-[100vw] text-white '>
                 {
                     users.map((user) => {
                         return <>

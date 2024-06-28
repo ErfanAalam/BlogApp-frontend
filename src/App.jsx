@@ -56,13 +56,17 @@ function App() {
             })
             :
             foundedBlog.map((blog, index) => {
-              return <div className="border-2 p-4  w-fit" key={index}>
+              return <div className="border-2 p-4 w-[700px] flex gap-8" key={index}>
+               
                 {blog.file && (
-                  <img src={`https://blogapp-backend-4605.onrender.com/${blog.file}`} alt={blog.title} className="img-fluid" />
+                  <img src={`https://blogapp-backend-4605.onrender.com/${blog.file}`} alt={blog.title} className=" w-[300px] " />
                 )}
-                <h1 className="text-2xl font-bold">{blog.title}</h1>
-                <h3 className="text-2xl">{blog.author}</h3>
-                <p className="text-xl">{blog.desc}</p>
+               <div className="text-white flex flex-col gap-4">
+               <h1 className="text-2xl font-bold">{blog.title}</h1>
+                <h3 className="text-[20px]"> - {blog.author}</h3>
+                <p className="text-xl text-wrap">{blog.desc}</p>
+               </div>
+
               </div>
             })
         }
