@@ -41,10 +41,10 @@ function App() {
           search == "" ?
 
             blogs.map((blog, index) => {
-              return <div className="border-2 p-4 w-[700px] flex gap-8" key={index}>
+              return <div className="border-2 p-4 w-[700px] h-[300px] flex gap-8" key={index}>
                
                 {blog.file && (
-                  <img src={`https://blogapp-backend-4605.onrender.com/${blog.file}`} alt={blog.title} className=" w-[300px] " />
+                  <img src={`https://blogapp-backend-4605.onrender.com/${blog.file}`} alt={blog.title} className=" w-fit " />
                 )}
                <div className="text-white flex flex-col gap-4">
                <h1 className="text-2xl font-bold">{blog.title}</h1>
